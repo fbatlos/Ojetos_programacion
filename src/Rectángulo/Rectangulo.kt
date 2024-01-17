@@ -14,6 +14,6 @@ class rectangulo(var base: Double , var altura:Double) {
     }
 
     fun mostrarResultados(){
-        println("Su altura es de $altura y su base es de $base y el resultado del area es ${(area*100.0).roundToInt()/100.0} y el resultado del ${(perimetro*100.0).roundToInt()/100.0}")
+        println("Su altura es de $altura cms y su base es de $base cms y el resultado del area es ${(area*100.0).roundToInt()/100.0} cms y el resultado del ${(perimetro*100.0).roundToInt()/100.0} cms")
     }
 }
