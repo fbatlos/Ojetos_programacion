@@ -1,4 +1,10 @@
-class persona( var nombre: String,var peso: Double , var altura: Double ) {
+class persona( var nombre: String,peso: Double ,  altura: Double ) {
+    var peso = peso
+        set(value){
+            require(value>0){"EL "}
+        }
+
+    var altura = altura
     var imc : Double = 0.0
 
     init {
