@@ -5,9 +5,27 @@
  * @param monto monto de la compra
  * @constructor Crea una compra con cliente, dia y monto
  */
-class compra(){
+data class compra(var cliente:String , var dia:Int , var monto:Double){
 
 }
+
+/**
+ * Clase Cliente
+ * @param nombre nombre del cliente
+ * @param domicilio domicilio del cliente
+ * @constructor Crea un cliente con nombre y domicilio
+ */
+
+data class cliente(var nombre:String , var domicilo:String){
+    constructor(nombre: String , domicilo: String){
+
+    }
+
+}
+
+
+
+
 
 fun main(){
     val compras = listOf<List<Any>>(listOf("Nuria Costa", 5, 12780.78, "Calle Las Flores 355"),
