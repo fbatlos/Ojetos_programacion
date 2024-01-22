@@ -7,8 +7,10 @@ class coche {
     fun getColor(): String {
         return this.color
     }
-    fun setColor(color: String) {
-            this.color = color
+    fun setColor(color: String?) {
+            if (color == null){
+                this.color = "Blanco"
+            }else{this.color = color}
         }
 
     private var marca = ""
@@ -16,7 +18,7 @@ class coche {
         return this.marca
     }
     fun setMarca(marca: String) {
-        this.marca = marca
+         this.marca = marca
     }
 
     private var modelo = ""
@@ -32,7 +34,7 @@ class coche {
     fun setNcaballos(Ncaballos:Int) {
             if (this.Ncaballos<70 || this.Ncaballos>700){
                 this.Ncaballos = 0
-            }else this.Ncaballos = Ncaballos
+            }
         }
 
     fun getNcaballos(): Int {
@@ -41,7 +43,7 @@ class coche {
     private var Npuertas = 0
 
     fun setNpuertas(Npuertas: Int) {
-            this.Npuertas = Npuertas
+
         }
 
     fun getNpuertas():Int {

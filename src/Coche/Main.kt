@@ -3,7 +3,7 @@ package Coche
 fun main(){
 
     val coche1 = coche()
-    coche1.setColor("Rojo")
+    coche1.setColor(null)
     coche1.setMarca("Renol")
     coche1.setModelo("777P")
     coche1.setNcaballos(60)
