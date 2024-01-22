@@ -15,14 +15,15 @@ data class compra(var cliente:String , var dia:Int , var monto:Double){
  * @param domicilio domicilio del cliente
  * @constructor Crea un cliente con nombre y domicilio
  */
-
+/*
 data class cliente(var nombre:String , var domicilo:String){
-    constructor(nombre: String , domicilo: String){
 
+    constructor(domicilo: String) : this(nombre, domicilo) {
+    this.nombre = nombre
     }
 
 }
-
+*/
 
 
 
