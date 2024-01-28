@@ -1,89 +1,32 @@
-/**
- * Clase Compra
- * @param cliente cliente que realizo la compra
- * @param dia dia de la compra
- * @param monto monto de la compra
- * @constructor Crea una compra con cliente, dia y monto
- */
-data class compra(var cliente: List<String> , var dia:List<Int> , var monto:List<String>){
+/*data class Compra(var cliente: String, var dia: String, var monto: String, var domicilio: String){
+   //no sé porque no me funciona el data class
+}
 
+data class Cliente(var nombre: String, var domicilio: Domicilio)
 
-    fun compra(){
+data class Domicilio(var domicilio: String, var numero: String)
 
-
+class RepositorioCompras(var comprasData: List<List<String>>) {
+    val compras: List<Unit> = comprasData.map {
+        val compra = Compra(it[0], it[1], it[2], it[3])
+        compra.copy(cliente = it[0], dia = it[1], monto = it[2], domicilio = it[3])
     }
-}
-
-/**
- * Clase Cliente
- * @param nombre nombre del cliente
- * @param domicilio domicilio del cliente
- * @constructor Crea un cliente con nombre y domicilio
-
-
-data class cliente(var nombre:String , var domicilo:String){
-
-
-}
-*/
-class repositorioCompras(var complas:List<List<Any>>){
 
 }
 
-
-
-fun main(){
-
-
-
-
-    val compras = (listOf<List<Any>>(listOf("Nuria Costa", 5, "12780.78", "Calle Las Flores 355"),
-        listOf("Jorge Russo", 7, "699", "Mirasol 218"),
-        listOf("Nuria Costa", 7, "532.90", "Calle Las Flores 355"),
-        listOf("Julián Rodriguez", 12, "5715.99", "La Mancha 761"),
-        listOf("Jorge Russo", 15, "958", "Mirasol 218"))
+fun main() {
+    val comprasData = listOf(
+        listOf("Nuria Costa", "5", "12780.78", "Calle Las Flores", "355"),
+        listOf("Jorge Russo", "7", "699", "Mirasol", "218"),
+        listOf("Nuria Costa", "7", "532.90", "Calle Las Flores", "355"),
+        listOf("Julián Rodriguez", "12", "5715.99", "La Mancha", "761"),
+        listOf("Jorge Russo", "15", "958", "Mirasol", "218")
     )
 
+    val repositorioCompras = RepositorioCompras(comprasData)
 
-
-
-
-
-
-    var nombres = nombre(compras)
-    var dias = dia(compras)
-    var montos = monto(compras)
-    var calles = calle(compras)
-
+    // Ahora puedes acceder a las compras dentro del RepositorioCompras
+    val listaDeCompras = repositorioCompras.compras
+    listaDeCompras.forEach { println(it) }
 }
-fun comprador():List<Any>{
-
-    do {
-        confirma=comprador()
-    }while (confirma == null)
-}
-
-
-fun nombre(compras: List<List<Any>>): List<String> {
-    val nombres = mutableListOf<String>()
-    compras.forEach{nombres.add(it[0].toString())}
-    return nombres.toList()
-}
-
-fun dia(compras: List<List<Any>>): List<Int> {
-    val dias = mutableListOf<Int>()
-    compras.forEach{dias.add(it[1] as Int)}
-    return dias.toList()
-}
-
-fun monto(compras: List<List<Any>>): List<String> {
-    val monto = mutableListOf<String>()
-    compras.forEach{monto.add(it[2].toString())}
-    return monto.toList()
-}
-
-fun calle(compras: List<List<Any>>): List<String> {
-    val calle = mutableListOf<String>()
-    compras.forEach{calle.add(it[3].toString())}
-    return calle.toList()
-}
+*/
