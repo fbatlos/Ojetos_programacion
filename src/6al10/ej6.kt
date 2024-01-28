@@ -1,4 +1,5 @@
-/*data class Compra(var cliente: String, var dia: String, var monto: String, var domicilio: String){
+package `6al10`
+data class Compra(var cliente: String, var dia: String, var monto: String, var domicilio: String){
    //no sé porque no me funciona el data class
 }
 
@@ -29,4 +30,3 @@ fun main() {
     val listaDeCompras = repositorioCompras.compras
     listaDeCompras.forEach { println(it) }
 }
-*/
