@@ -18,22 +18,17 @@ class Cuenta( numCuenta: String , saldo:Double = 0.0 ) {
         println("Tu saldo es de : $saldo")
     }
 
-    fun abonos(){
-        print("Cuanto desea ingresar => ")
-        do {
-            try {
-                val ingreso = readln().toDouble()
-                this.saldo += ingreso
-                break
+    fun abonos(saldoAbonado: Double){
+        try {
+            this.saldo += saldoAbonado
 
-            }catch (_:NumberFormatException){
-                println("Dato no valido")
-            }
-        }while (true)
+        }catch (_:NumberFormatException){
+            println("Dato no valido")
+        }
     }
 
-    fun realizarPagos(){
-        do {
+    fun realizarPagos(pago:Double){
+       /* do {
             println("Que pagos quieres realizar :\n(1)Gastos del hogar.\n(2)Bizum")
             print("=> ")
             val opcion = readln()
@@ -75,6 +70,11 @@ class Cuenta( numCuenta: String , saldo:Double = 0.0 ) {
                     }
                 }
             }
-        }while (true)
+        }while (true)*/
+        try {
+            saldo -= pago
+        }catch (_:NumberFormatException){
+            println("Dato no valido")
+        }
     }
 }
